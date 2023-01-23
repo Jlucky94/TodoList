@@ -1,10 +1,10 @@
-import React, {KeyboardEvent, ChangeEvent, FC, PropsWithChildren, useState} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import {FilterValuesType} from "./App";
 import AddItemForm from "./AddItemForm";
 import EditableSpan from "./Editable Span";
 import {Button, ButtonGroup, Checkbox, IconButton, List, ListItem} from "@material-ui/core";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import {red} from "@material-ui/core/colors";
+
 
 type TodoListPropsType = {
     todoListID: string
@@ -58,7 +58,6 @@ const TodoList: FC<TodoListPropsType> = (props: PropsWithChildren<TodoListPropsT
     const changeTodoListTitle = (title: string) => props.changeTodoListTitle(title, props.todoListID)
     return (
         <div>
-
             <h3>
                 <EditableSpan title={props.title} changeTitle={changeTodoListTitle}/>
                 <IconButton
